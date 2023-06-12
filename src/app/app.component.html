@@ -1,0 +1,114 @@
+<section class="main-body">
+  <div class="icon-div">
+    <i class="fa fa-home"></i>
+    <i class="fa fa-chevron-right"></i>
+    <span>Explore Schools</span>
+    <input matInput type="text" placeholder="search for an institute or course" class="search-bar">
+    <p>You found <strong>4,060</strong> institutes and <strong> 293,039</strong> courses</p>
+    <hr>
+  </div>
+  <div class="button-div">
+    <button mat-stroked-button>Best Match</button>
+    <button mat-stroked-button>Best Rank</button>
+    <button mat-stroked-button>Acceptance Rate</button>
+    <button mat-stroked-button>Tuition Fee</button>
+  </div>
+  <div class="main-content">
+    <hr>
+    <div class="grid-div">
+      <div class="left-content">
+        <div class="country-div">
+          <mat-accordion class="country">
+            <mat-expansion-panel (opened)="countrypanelOpenState = true"
+                                 (closed)="countrypanelOpenState = false"
+                                 hideToggle>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Country
+                </mat-panel-title>
+                <mat-panel-description>
+                  <i class="fa fa-chevron-right" *ngIf="countrypanelOpenState === false"></i>
+                  <i class="fa fa-chevron-down" *ngIf="countrypanelOpenState === true"></i>
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+              <span *ngFor="let country of countries" class="country-span"><input type="checkbox">&nbsp;{{country.name}}</span>
+            </mat-expansion-panel>
+          </mat-accordion>
+        </div>
+        <div class="disciplines-div">
+          <mat-accordion class="country">
+            <mat-expansion-panel (opened)="disciplinepanelOpenState = true"
+                                 (closed)="disciplinepanelOpenState = false"
+                                 hideToggle>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Disciplines
+                </mat-panel-title>
+                <mat-panel-description>
+                  <i class="fa fa-chevron-right" *ngIf="disciplinepanelOpenState === false"></i>
+                  <i class="fa fa-chevron-down" *ngIf="disciplinepanelOpenState === true"></i>
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+              <span *ngFor="let discipline of disciplines" class="country-span"><input type="checkbox">&nbsp;{{discipline.name}}</span>
+            </mat-expansion-panel>
+          </mat-accordion>
+        </div>
+        <div class="tuition-div">
+          <mat-accordion class="country">
+            <mat-expansion-panel (opened)="disciplinepanelOpenState = true"
+                                 (closed)="disciplinepanelOpenState = false"
+                                 hideToggle>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Tuition Fee
+                </mat-panel-title>
+                <mat-panel-description>
+                  <i class="fa fa-chevron-right" *ngIf="disciplinepanelOpenState === false"></i>
+                  <i class="fa fa-chevron-down" *ngIf="disciplinepanelOpenState === true"></i>
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+              <span *ngFor="let fee of tuitionfee" class="country-span"><input type="radio">&nbsp;{{fee.name}}</span>
+            </mat-expansion-panel>
+          </mat-accordion>
+        </div>
+        <div class="partnership-div">
+          <mat-accordion class="country">
+            <mat-expansion-panel (opened)="disciplinepanelOpenState = true"
+                                 (closed)="disciplinepanelOpenState = false"
+                                 hideToggle>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Partnership Type
+                </mat-panel-title>
+                <mat-panel-description>
+                  <i class="fa fa-chevron-right" *ngIf="disciplinepanelOpenState === false"></i>
+                  <i class="fa fa-chevron-down" *ngIf="disciplinepanelOpenState === true"></i>
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+              <span *ngFor="let partnertType of partnershipType" class="country-span"><input type="checkbox">&nbsp;{{partnertType.name}}</span>
+            </mat-expansion-panel>
+          </mat-accordion>
+        </div>
+        <div class="saudi-div">
+          <mat-accordion class="country">
+            <mat-expansion-panel (opened)="disciplinepanelOpenState = true"
+                                 (closed)="disciplinepanelOpenState = false"
+                                 hideToggle>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Saudi Arabian Ministry of Education
+                </mat-panel-title>
+                <mat-panel-description>
+                  <i class="fa fa-chevron-right" *ngIf="disciplinepanelOpenState === false"></i>
+                  <i class="fa fa-chevron-down" *ngIf="disciplinepanelOpenState === true"></i>
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+              <span *ngFor="let education of ministryOfEducation" class="country-span"><input type="radio">&nbsp;{{education.name}}</span>
+            </mat-expansion-panel>
+          </mat-accordion>
+        </div>
+      </div>
+      <div class="right-content">456</div>
+    </div>
+  </div>
+</section>
